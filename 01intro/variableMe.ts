@@ -14,4 +14,14 @@ let isLoggedIn: boolean = false;
 // let userId: number = 334466;
 // userId.toFixed();
 
+
+// any
+
+let hero: string;
+function getHero() {
+    return "Thor";
+}
+
+hero = getHero();
+
 export {};
