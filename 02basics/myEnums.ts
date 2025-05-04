@@ -6,7 +6,7 @@ enum SeatChoice {
 }
 
 const msSeat = SeatChoice.AISLE;
-// here if we add const before enum then we generate less lines of code
+// here if we add const before enum then we generate less lines of code in js equivalent
 
 
 export{}
