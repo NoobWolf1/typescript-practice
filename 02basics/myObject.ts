@@ -24,8 +24,17 @@ function createCourse(): {name: string, price: number}{
 
 
 
+// Type aliases
+type User = {
+    name: string,
+    email: string,
+    isActive: boolean
+};
 
+function createUser2(user: User): User {
+    return user;
+}
 
-
+createUser2({name: '', email: '', isActive: true});
 
 export{};
