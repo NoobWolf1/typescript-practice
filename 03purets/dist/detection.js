@@ -41,3 +41,28 @@ function getFood(pet) {
         return "bird food";
     }
 }
+function getTrueShape(shape) {
+    if (shape.kind === "circle") {
+        shape;
+        return Math.PI * shape.radius ** 2;
+    }
+    shape;
+    return shape.side * shape.side; // this breaks when I add rectangle
+}
+// never type and exhaustive switch
+function getArea(shape) {
+    switch (shape.kind) {
+        case "circle":
+            shape;
+            return Math.PI * shape.radius ** 2;
+        case "square":
+            shape;
+            return shape.side * shape.side;
+        case "rectangle":
+            shape;
+            return shape.width * shape.length;
+        default:
+            const _defaultForShape = shape; // this is also breaked when added never
+            return _defaultForShape;
+    }
+}
