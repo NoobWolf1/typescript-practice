@@ -17,12 +17,13 @@
 // equivalent of above code is 
 class User {
     
-    private _courseCount: number = 1;
+    protected _courseCount: number = 1; // as soon as we use protected it is accessible in this class and other class which extends the User, for private it is accessible only with the elements of this class not outside not the other classes which extends this class
 
     readonly city: string = "Jabalpur";
     constructor(public email: string,
         public name: string,
-        private userId: string) {
+        private userId: string
+    ){
     }
 
     private deleteToken() {
@@ -50,3 +51,13 @@ class User {
 const malay = new User("ms@ms.com", "Malay", "2");
 
 
+// now when you think about inheritance
+
+class SubUser extends User { // it can acquire all the properties except the private property
+
+    isFamily: boolean = true;
+    changeCourseCount() {
+        this._courseCount = 4;
+    }
+
+}
