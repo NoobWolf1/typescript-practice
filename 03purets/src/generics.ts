@@ -52,3 +52,55 @@ const getMoreSearchProducts3 = <T> (val: T[]): T => {
     const myIndex = 3;
     return val[myIndex];
 }
+
+// Using Type Parameters in Generic Constraints
+
+function anotherFunction<T, U extends number>(val1: T, val2: U): object {
+    return {
+        val1, 
+        val2
+    }
+}
+
+// console.log(anotherFunction(3,"4")); // here we get a problem
+
+
+// some real world example
+interface Database {
+    connection: string,
+    username: string,
+    password: string
+}
+
+
+function someotherFunction<T, U extends Database>(val1: T, val2: U): object {
+    return {
+        val1, 
+        val2
+    }
+}
+
+someotherFunction(3, {connection: "", username: "", password: ""});
+
+// Generics and Class
+interface Quiz {
+    name: string,
+    type: string
+}
+
+interface Course {
+    name: string,
+    author: string,
+    subject: string
+}
+
+class Sellable<T> {
+    public cart: T[] = [];
+
+    addToCart(product: T) {
+        this.cart.push(product);
+    }
+}
+
+// this class is not one shot for all
+
