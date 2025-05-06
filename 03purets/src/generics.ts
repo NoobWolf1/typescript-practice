@@ -31,3 +31,24 @@ interface Bottle{
 }
 
 console.log(identityFour<Bottle>({brand: "Milton", type: 2}));
+
+function getSearchProducts<T>(products: T[]): T[] {
+    return products;
+}
+
+function getSearchProducts2<T>(products: Array<T>): Array<T> {
+    return products;
+}
+
+
+function getSearchProducts3<T>(products: T[]): T {
+    const myIndex = 3;
+    return products[myIndex];
+}
+
+// now creating arrow function of above example
+
+const getMoreSearchProducts3 = <T> (val: T[]): T => {
+    const myIndex = 3;
+    return val[myIndex];
+}

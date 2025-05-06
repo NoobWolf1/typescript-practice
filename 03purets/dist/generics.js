@@ -16,3 +16,18 @@ function identityFour(val) {
     return val;
 }
 console.log(identityFour({ brand: "Milton", type: 2 }));
+function getSearchProducts(products) {
+    return products;
+}
+function getSearchProducts2(products) {
+    return products;
+}
+function getSearchProducts3(products) {
+    const myIndex = 3;
+    return products[myIndex];
+}
+// now creating arrow function of above example
+const getMoreSearchProducts3 = (val) => {
+    const myIndex = 3;
+    return val[myIndex];
+};
